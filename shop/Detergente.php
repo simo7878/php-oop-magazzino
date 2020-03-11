@@ -2,16 +2,33 @@
 
 
 require_once __DIR__ . '/../traits/GetPosition.php';
+//creare una classe per un prodotto generico
+require_once'traits/Autorizzazione.php'
 
 class Detergente {
+  use Autorizzazione;
   public $categoria;
   public $marca;
   public $prezzo;
   public $formato;
   public $inci;
 
+//funzione per passare gli attributi principali
+  function __construct($_autorizzazione, $_categoria, $_formato, $_prezzo, $_marca) {
+    if(!empty($_autorizzazione)) {
+      $this->getAutorizzazione($_autorizzazione);
+    }
+    if ($this->autorizzato == false) {
+      die('non hai autorizzazione');
+    }
+    if (!is float($_prezzo)) {
+      die('non è un decimale');
+    }elseif (strlen($_categoria) !== 10) {
+      die('non è un codice');
 
-  function __construct($_categoria, $_formato, $_prezzo, $_marca) {
+    }elseif (empty($_categoria)) {
+      die('non è una categoria');
+    }
     $this->categoria = $_categoria;
     $this->formato = $_formato;
     $this->prezzo = $_prezzo;
