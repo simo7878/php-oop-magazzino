@@ -24,7 +24,7 @@ $lineacars = new Detergente('shampoo', '500ml', 35, 'powershell');
 $lineacars-> = 'shampooauto';
 
 
-$internoauto = new Product('detergente', '200ml', 20, 'powershell');
+$internoauto = new Detergente('shampoo', '200ml', 20, 'powershell');
 $internoauto-> = 'lavatappezzeria';
 
 
