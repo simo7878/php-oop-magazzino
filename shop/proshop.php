@@ -1,6 +1,6 @@
 <?php
 
-class detergenti {
+class detergentiAuto {
   public $categoria;
   public $marca;
   public $prezzo;
@@ -15,6 +15,14 @@ class detergenti {
     $this->marca = $_marca;
   }
 }
+
+$lineacars = new Product('detergente', 500, 35, 'powershell');
+$lineacars-> = 'lavaincera';
+$lineacars-> = 'cleencristalli';
+
+$internoauto = new Product('detergente', 200, 20, 'powershell');
+$internoauto-> = 'lavatappezzeria';
+$internoauto-> = 'lucidacruscotto';
 
 
 
