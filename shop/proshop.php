@@ -1,6 +1,9 @@
 <?php
 
-class detergentiAuto {
+
+require_once __DIR__ . '/../traits/GetPosition.php';
+
+class detergenti {
   public $categoria;
   public $marca;
   public $prezzo;
